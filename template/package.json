@@ -89,6 +89,12 @@
         "node-sass": "^4.7.2",
         "sass-loader": "^6.0.6",
         {{/sass}}
+        {{#gulp}}
+        "gulp": "^3.9.1",
+        "gulp-clean": "^0.4.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-replace": "^0.6.1",
+        {{/gulp}}
         "autoprefixer": "^7.1.2",
         "babel-core": "^6.22.1",
         "babel-helper-vue-jsx-merge-props": "^2.0.3",

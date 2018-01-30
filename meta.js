@@ -143,6 +143,11 @@ module.exports = {
             type: 'confirm',
             message: 'Use Sass?',
         },
+        gulp: {
+            when: 'isNotTest',
+            type: 'confirm',
+            message: 'Setup Gulp?',
+        },
         autoInstall: {
             when: 'isNotTest',
             type: 'list',
@@ -180,6 +185,7 @@ module.exports = {
         'test/unit/setup.js': "unit && runner === 'jest'",
         'test/e2e/**/*': 'e2e',
         'src/router/**/*': 'router',
+        'gulpfile.js': 'gulp'
     },
     complete: function(data, { chalk }) {
         const green = chalk.green
