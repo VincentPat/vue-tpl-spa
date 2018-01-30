@@ -1,4 +1,10 @@
-# vue-webpack-boilerplate
+# vue-tpl-spa
+
+## Usage
+
+```bash
+vue init VincentPat/vue-tpl-spa my-project
+```
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
 
