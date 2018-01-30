@@ -21,10 +21,10 @@ const PrerenderSpaPlugin = require('prerender-spa-plugin')
 
 ```js
 new PrerenderSpaPlugin(
-  // Path to compiled app
-  path.join(__dirname, '../dist'),
-  // List of endpoints you wish to prerender
-  [ '/' ]
+    // Path to compiled app
+    path.join(__dirname, '../dist'),
+    // List of endpoints you wish to prerender
+    [ '/' ]
 )
 ```
 
@@ -33,7 +33,7 @@ If you also wanted to prerender `/about` and `/contact`, then that array would b
 4. Enable history mode for `vue-router`:
 ```js
 const router = new VueRouter({
-  mode: 'history',
-  routes: [...]
+    mode: 'history',
+    routes: [...]
 })
 ```

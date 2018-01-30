@@ -26,9 +26,9 @@ In order for Webpack to return the correct asset paths, you need to use `require
 
 ``` js
 computed: {
-  background () {
-    return require('./bgs/' + this.id + '.jpg')
-  }
+    background () {
+        return require('./bgs/' + this.id + '.jpg')
+    }
 }
 ```
 
@@ -43,11 +43,11 @@ As an example, with the following default values:
 ``` js
 // config/index.js
 module.exports = {
-  // ...
-  build: {
-    assetsPublicPath: '/',
-    assetsSubDirectory: 'static'
-  }
+    // ...
+    build: {
+        assetsPublicPath: '/',
+        assetsSubDirectory: 'static'
+    }
 }
 ```
 

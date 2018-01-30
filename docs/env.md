@@ -7,20 +7,20 @@ As an example:
 ```js
 // config/prod.env.js
 module.exports = {
-  NODE_ENV: '"production"',
-  DEBUG_MODE: false,
-  API_KEY: '"..."' // this is shared between all environments
+    NODE_ENV: '"production"',
+    DEBUG_MODE: false,
+    API_KEY: '"..."' // this is shared between all environments
 }
 
 // config/dev.env.js
 module.exports = merge(prodEnv, {
-  NODE_ENV: '"development"',
-  DEBUG_MODE: true // this overrides the DEBUG_MODE value of prod.env
+    NODE_ENV: '"development"',
+    DEBUG_MODE: true // this overrides the DEBUG_MODE value of prod.env
 })
 
 // config/test.env.js
 module.exports = merge(devEnv, {
-  NODE_ENV: '"testing"'
+    NODE_ENV: '"testing"'
 })
 ```
 
@@ -28,17 +28,17 @@ module.exports = merge(devEnv, {
 
 So, the environment variables are:
 - Production
-    - NODE_ENV   = 'production',
-    - DEBUG_MODE = false,
-    - API_KEY    = '...'
+        - NODE_ENV     = 'production',
+        - DEBUG_MODE = false,
+        - API_KEY        = '...'
 - Development
-    - NODE_ENV   = 'development',
-    - DEBUG_MODE = true,
-    - API_KEY    = '...'
+        - NODE_ENV     = 'development',
+        - DEBUG_MODE = true,
+        - API_KEY        = '...'
 - Testing
-    - NODE_ENV   = 'testing',
-    - DEBUG_MODE = true,
-    - API_KEY    = '...'
+        - NODE_ENV     = 'testing',
+        - DEBUG_MODE = true,
+        - API_KEY        = '...'
 
 As we can see, `test.env` inherits the `dev.env` and the `dev.env` inherits the `prod.env`.
 

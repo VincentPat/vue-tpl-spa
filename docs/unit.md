@@ -14,7 +14,7 @@ This project offers two options for unit testing:
 
 - `setup.js`
 
-  Jest runs this file before it runs the unit tests. It sets the Vue production tip to false.
+    Jest runs this file before it runs the unit tests. It sets the Vue production tip to false.
 
 ### Mocking Dependencies
 
@@ -34,15 +34,15 @@ Chai and Sinon are integrated using [karma-sinon-chai](https://github.com/kmees/
 
 - `index.js`
 
-  This is the entry file used by `karma-webpack` to bundle all the test code and source code (for coverage purposes). You can ignore it for the most part.
+    This is the entry file used by `karma-webpack` to bundle all the test code and source code (for coverage purposes). You can ignore it for the most part.
 
 - `specs/`
 
-  This directory is where you write your actual tests. You can use full ES2015+ and all supported Webpack loaders in your tests.
+    This directory is where you write your actual tests. You can use full ES2015+ and all supported Webpack loaders in your tests.
 
 - `karma.conf.js`
 
-  This is the Karma configuration file. See [Karma docs](https://karma-runner.github.io/) for more details.
+    This is the Karma configuration file. See [Karma docs](https://karma-runner.github.io/) for more details.
 
 ### Running Tests in More Browsers
 

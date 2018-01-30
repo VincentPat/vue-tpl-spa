@@ -7,19 +7,19 @@ To configure the proxy rules, edit `dev.proxyTable` option in `config/index.js`.
 ``` js
 // config/index.js
 module.exports = {
-  // ...
-  dev: {
-    proxyTable: {
-      // proxy all requests starting with /api to jsonplaceholder
-      '/api': {
-        target: 'http://jsonplaceholder.typicode.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api': ''
+    // ...
+    dev: {
+        proxyTable: {
+            // proxy all requests starting with /api to jsonplaceholder
+            '/api': {
+                target: 'http://jsonplaceholder.typicode.com',
+                changeOrigin: true,
+                pathRewrite: {
+                    '^/api': ''
+                }
+            }
         }
-      }
     }
-  }
 }
 ```
 
@@ -31,11 +31,11 @@ In addition to static urls you can also use glob patterns to match URLs, e.g. `/
 
 ``` js
 proxyTable: {
-  '**': {
-    target: 'http://jsonplaceholder.typicode.com',
-    filter: function (pathname, req) {
-      return pathname.match('^/api') && req.method === 'GET'
+    '**': {
+        target: 'http://jsonplaceholder.typicode.com',
+        filter: function (pathname, req) {
+            return pathname.match('^/api') && req.method === 'GET'
+        }
     }
-  }
 }
 ```

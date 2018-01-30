@@ -6,19 +6,19 @@ Let's take a look at the files in the `test/e2e` directory:
 
 - `runner.js`
 
-  A Node.js script that starts the dev server, and then launches Nightwatch to run tests against it. This is the script that will run when you run `npm run e2e`.
+    A Node.js script that starts the dev server, and then launches Nightwatch to run tests against it. This is the script that will run when you run `npm run e2e`.
 
 - `nightwatch.conf.js`
 
-  Nightwatch configuration file. See [Nightwatch's docs on configuration](http://nightwatchjs.org/gettingstarted#settings-file) for more details.
+    Nightwatch configuration file. See [Nightwatch's docs on configuration](http://nightwatchjs.org/gettingstarted#settings-file) for more details.
 
 - `custom-assertions/`
 
-  Custom assertions that can be used in Nightwatch tests. See [Nightwatch's docs on writing custom assertions](http://nightwatchjs.org/guide#writing-custom-assertions) for more details.
+    Custom assertions that can be used in Nightwatch tests. See [Nightwatch's docs on writing custom assertions](http://nightwatchjs.org/guide#writing-custom-assertions) for more details.
 
 - `specs/`
 
-  Your actual tests! See [Nightwatch's docs on writing tests](http://nightwatchjs.org/guide#writing-tests) and [API reference](http://nightwatchjs.org/api) for more details.
+    Your actual tests! See [Nightwatch's docs on writing tests](http://nightwatchjs.org/guide#writing-tests) and [API reference](http://nightwatchjs.org/api) for more details.
 
 ### Running Tests in More Browsers
 

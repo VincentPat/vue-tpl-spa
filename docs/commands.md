@@ -34,8 +34,8 @@ All build commands are executed via [NPM Scripts](https://docs.npmjs.com/misc/sc
 
 - Run tests in multiple browsers in parallel.
 - Works with one command out of the box:
-  - Selenium and chromedriver dependencies automatically handled.
-  - Automatically spawns the Selenium server.
+    - Selenium and chromedriver dependencies automatically handled.
+    - Automatically spawns the Selenium server.
 
 ### `npm run lint`
 

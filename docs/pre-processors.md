@@ -33,11 +33,11 @@ You can simply add PostCSS plugins you want to use to the `.postcssrc.js`file in
 // https://github.com/michael-ciniawsky/postcss-load-config
 
 module.exports = {
-  "plugins": {
-    // to edit target browsers: use "browserslist" field in package.json
-    "postcss-import": {},
-    "autoprefixer": {}
-  }
+    "plugins": {
+        // to edit target browsers: use "browserslist" field in package.json
+        "postcss-import": {},
+        "autoprefixer": {}
+    }
 }
 ```
 

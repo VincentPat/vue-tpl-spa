@@ -14,10 +14,10 @@ If you are not happy with the default linting rules, you have several options:
 
 1. Overwrite individual rules in `.eslintrc.js`. For example, you can add the following rule to enforce semicolons instead of omitting them:
 
-  ``` js
-  // .eslintrc.js
-  "semi": [2, "always"]
-  ```
+    ``` js
+    // .eslintrc.js
+    "semi": [2, "always"]
+    ```
 
 2. Pick a different ESLint preset when generating the project, for example [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb).
 

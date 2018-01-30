@@ -10,12 +10,12 @@ However there is a caveat. `browserslist` recommends defining the target in a co
 
 ```json
 {
-  "...": "...",
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "...": "...",
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
 }
 ```
 
