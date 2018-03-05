@@ -7,6 +7,12 @@ import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
+{{#eventbus}}
+import bus from '@/plugin/bus';
+Vue.use(bus);
+{{/eventbus}}
+
+import '@/style/main.scss';
 
 Vue.config.productionTip = false
 

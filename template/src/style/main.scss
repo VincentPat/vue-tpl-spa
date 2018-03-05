@@ -1,0 +1,4 @@
+// 使用REM，375像素宽的设备下，1rem等于100px
+html {
+    font-size: calc(100vw / 3.75);
+}

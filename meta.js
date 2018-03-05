@@ -148,6 +148,11 @@ module.exports = {
             type: 'confirm',
             message: 'Setup Gulp?',
         },
+        eventbus: {
+            when: 'isNotTest',
+            type: 'confirm',
+            message: 'Setup Eventbus?',
+        },
         autoInstall: {
             when: 'isNotTest',
             type: 'list',
@@ -185,7 +190,8 @@ module.exports = {
         'test/unit/setup.js': "unit && runner === 'jest'",
         'test/e2e/**/*': 'e2e',
         'src/router/**/*': 'router',
-        'gulpfile.js': 'gulp'
+        'gulpfile.js': 'gulp',
+        'src/plugin/bus.js': 'eventbus'
     },
     complete: function(data, { chalk }) {
         const green = chalk.green
