@@ -3,17 +3,19 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 {{/if_eq}}
 import Vue from 'vue'
+import '@/style/main.scss';
+{{#eventbus}}
+import bus from '@/plugin/bus';
+{{/eventbus}}
 import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
+
 {{#eventbus}}
 import bus from '@/plugin/bus';
 Vue.use(bus);
 {{/eventbus}}
-
-import '@/style/main.scss';
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
