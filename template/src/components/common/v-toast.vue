@@ -18,8 +18,7 @@ export default {
             this.content = content;
             this.timeout = timeout;
             this.display = true;
-            if (typeof timeout === 'Number'
-                && timeout > 0) {
+            if (timeout > 0) {
                 setTimeout(() => {
                     this.display = false;
                 }, this.timeout);

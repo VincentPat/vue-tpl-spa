@@ -13,7 +13,6 @@ import router from './router'
 {{/router}}
 
 {{#eventbus}}
-import bus from '@/plugin/bus';
 Vue.use(bus);
 {{/eventbus}}
 Vue.config.productionTip = false
