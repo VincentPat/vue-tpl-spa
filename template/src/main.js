@@ -4,6 +4,8 @@
 {{/if_eq}}
 import Vue from 'vue'
 import '@/style/main.scss';
+import '@/style/vue-transition.scss';
+import '@/style/animation.scss';
 {{#eventbus}}
 import bus from '@/plugin/bus';
 {{/eventbus}}
