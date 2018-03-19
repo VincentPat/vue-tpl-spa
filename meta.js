@@ -153,6 +153,11 @@ module.exports = {
             type: 'confirm',
             message: 'Setup Eventbus?',
         },
+        wechat: {
+            when: 'isNotTest',
+            type: 'confirm',
+            message: 'Running in Wechat?',
+        },
         autoInstall: {
             when: 'isNotTest',
             type: 'list',

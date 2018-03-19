@@ -1,13 +1,3 @@
-import axios from 'axios';
-
-// 请求头参数
-const axiosConfig = {
-    headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'X-Requested-With': 'XMLHttpRequest'
-    }
-};
-
 // JSSDK API列表
 const defaultJsApiList = [
     // 所有要调用的 API 都要加到这个列表中
@@ -15,15 +5,6 @@ const defaultJsApiList = [
 ];
 
 export default {
-    getWxSignPackage: () => {
-        const url = '/game/gameAjax/GetSignPackage';
-        const href = location.href.split('#')[0];
-        return axios.post(url, `url=${window.encodeURIComponent(href)}`, axiosConfig).then((response) => {
-            const result = response.data;
-            const data = result.data || result.msg;
-            return data;
-        });
-    },
     configWx: (wxSignPackage, jsApiList) => {
         if (typeof window.wx !== 'undefined') {
             // 这里有个坑。用//api.24haowan.com时，nonceStr是大写。用平台时是：noncestr。切换时记得切换
