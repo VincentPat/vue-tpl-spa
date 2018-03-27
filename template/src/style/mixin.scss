@@ -64,9 +64,10 @@
 
 // 黑框提示
 @mixin toast {
-    background: rgba(0, 0, 0, 0.7);
-    padding: .02rem .06rem;
-    border-radius: .06rem;
+    max-width: 80vw;
+    background: rgba(0, 0, 0, 0.8);
+    padding: .06rem .1rem;
+    border-radius: .04rem;
     color: #fff;
     text-align: center;
 }

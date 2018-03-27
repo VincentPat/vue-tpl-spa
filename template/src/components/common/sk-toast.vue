@@ -1,8 +1,8 @@
 <template>
     <transition name="fade">
-        <div class="v-toast"
+        <div class="sk-toast"
             v-show="display">
-            <div class="v-toast__cnt"
+            <div class="sk-toast__cnt"
                 v-html="content">
             </div>
         </div>
@@ -10,8 +10,25 @@
 </template>
 
 <script>
+/**
+ * @name 弹出框提示
+ * @description 可调用show方法显示自定义HTML，可设置timeout参数，定时自动消失。
+ * @method show 显示
+ * @method hide 隐藏
+ * @event show 显示回调
+ * @event hide 隐藏回调
+ */
+import displayMixin from '../../mixins/common-display';
+
 export default {
-    name: 'v-toast',
+    name: 'sk-toast',
+    mixins: [displayMixin],
+    data() {
+        return {
+            content: null,
+            timeout: 0
+        };
+    },
     methods: {
         show({ content, timeout = 3000 }) {
             this.$emit('show');
@@ -33,9 +50,9 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/style/mixin.scss';
+@import '../../style/mixin.scss';
 
-.v-toast {
+.sk-toast {
     @include fullscreen;
     &__cnt {
         @include transform-center;
