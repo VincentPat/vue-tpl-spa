@@ -25,6 +25,7 @@ export default {
     mixins: [displayMixin],
     data() {
         return {
+            display: false,
             content: null,
             timeout: 0
         };
