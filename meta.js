@@ -138,6 +138,11 @@ module.exports = {
             type: 'confirm',
             message: 'Use Axios?',
         },
+        element: {
+            when: 'isNotTest',
+            type: 'confirm',
+            message: 'Use Element-UI?',
+        },
         sass: {
             when: 'isNotTest',
             type: 'confirm',

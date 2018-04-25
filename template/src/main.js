@@ -3,6 +3,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 {{/if_eq}}
 import Vue from 'vue'
+{{#element}}
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+{{/element}}
 import '@/style/main.scss';
 import '@/style/vue-transition.scss';
 import '@/style/animation.scss';
@@ -14,6 +18,9 @@ import App from './App'
 import router from './router'
 {{/router}}
 
+{{#element}}
+Vue.use(ElementUI);
+{{/element}}
 {{#eventbus}}
 Vue.use(bus);
 {{/eventbus}}
