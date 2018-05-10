@@ -69,6 +69,9 @@ export default {
             return `background: ${this.progressFg};width: ${this.progress}%;`;
         },
         bgStyle() {
+            if (this.bg.match(/\/\//ig)) {
+                return `background-image: url("${this.bg}");`;
+            }
             return `background: ${this.bg};`;
         }
     }
