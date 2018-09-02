@@ -8,7 +8,6 @@ export default {
     // 配置微信JSSDK
     configWx(wxSignPackage, jsApiList) {
         if (typeof window.wx !== 'undefined') {
-            // 这里有个坑。用//api.24haowan.com时，nonceStr是大写。用平台时是：noncestr。切换时记得切换
             if (!wxSignPackage.appId || !wxSignPackage.timestamp
                 || !wxSignPackage.nonceStr || !wxSignPackage.signature) {
                 return false;
