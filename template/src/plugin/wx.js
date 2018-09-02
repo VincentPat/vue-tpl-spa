@@ -5,7 +5,8 @@ const defaultJsApiList = [
 ];
 
 export default {
-    configWx: (wxSignPackage, jsApiList) => {
+    // 配置微信JSSDK
+    configWx(wxSignPackage, jsApiList) {
         if (typeof window.wx !== 'undefined') {
             // 这里有个坑。用//api.24haowan.com时，nonceStr是大写。用平台时是：noncestr。切换时记得切换
             if (!wxSignPackage.appId || !wxSignPackage.timestamp
@@ -24,8 +25,9 @@ export default {
         }
         return this;
     },
-    setWxShare: function setWxShare(wxShareObj, callback) {
-        if (typeof wx !== 'undefined') {
+    // 设置微信分享信息
+    setWxShare(wxShareObj, callback) {
+        if (typeof window.wx !== 'undefined') {
             // 配置分享信息
             window.wx.ready(() => {
                 // 在这里调用 API
@@ -34,7 +36,7 @@ export default {
                     title: wxShareObj.title, // 分享标题
                     link: wxShareObj.link, // 分享链接
                     imgUrl: wxShareObj.imgUrl, // 分享图标
-                    success: function success() {
+                    success: () => {
                         if (typeof callback === 'function') callback();
                     }
                 });
@@ -46,11 +48,12 @@ export default {
                     imgUrl: wxShareObj.imgUrl, // 分享图标
                     type: 'link', // 分享类型,music、video或link，不填默认为link
                     dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-                    success: function success() {
+                    success: () => {
                         if (typeof callback === 'function') callback();
                     }
                 });
             });
         }
+        return this;
     },
 };

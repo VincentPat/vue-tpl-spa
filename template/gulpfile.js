@@ -8,6 +8,13 @@ gulp.task('default', function() {
     console.log('Empty Task');
 });
 
+// 部署
+// gulp.task('deploy', function() {
+//     exec('node ./tasks/qiniu.js', function(err) {
+//         if (err) console.error(err);
+//     });
+// });
+
 // 清除
 // gulp.task('clean', function() {
 //     gulp.src('./static_resource/')
