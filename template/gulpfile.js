@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var replace = require('gulp-replace');
 var rename = require("gulp-rename");
 var clean = require('gulp-clean');
+var exec = require('child_process').exec;
 
 // 默认任务
 gulp.task('default', function() {
